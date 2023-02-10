@@ -33,18 +33,12 @@
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  #networking.nameservers = ["172.16.211.30" "1.1.1.1" "8.8.8.8"];
   networking.interfaces.enp0s31f6.useDHCP = true;
   networking.interfaces.wlp0s20f3.useDHCP = true;
   networking.networkmanager = {
     enable = true;
   };
   networking.wireless.interfaces = ["wlp0s20f3"];
-  #networking.wireless.networks = {
-  #};
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
